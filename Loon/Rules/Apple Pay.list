@@ -1,0 +1,4 @@
+DOMAIN,smp-device-content.apple.com
+DOMAIN-KEYWORD,smp-device
+USER-AGENT,passd*
+USER-AGENT,Wallet*

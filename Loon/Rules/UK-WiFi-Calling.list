@@ -1,3 +1,4 @@
+# https://raw.githubusercontent.com/iniwex5/tools/main/rules/UK-wifi-call.list
 # 地区检测
 DOMAIN-SUFFIX, gspe1-ssl.ls.apple.com
 # 沃达丰

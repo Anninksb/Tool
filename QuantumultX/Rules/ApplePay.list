@@ -1,0 +1,4 @@
+HOST,smp-device-content.apple.com
+HOST-KEYWORD,smp-device
+USER-AGENT,passd*
+USER-AGENT,Wallet*

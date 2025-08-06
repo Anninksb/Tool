@@ -6,8 +6,8 @@
             {"tag": "fakeip","type": "fakeip","inet4_range": "198.18.0.0/15","inet6_range": "fc00::/18"}
         ],
         "rules": [
-            {"clash_mode": "全局直连","action": "route","server": "ali"},
-            {"clash_mode": "全局代理","action": "route","server": "fakeip"},
+            {"clash_mode": "Direct","action": "route","server": "ali"},
+            {"clash_mode": "Global","action": "route","server": "fakeip"},
             {"query_type": "HTTPS","action": "reject"},
             {"query_type": ["A","AAAA"],"action": "route","server": "fakeip","rewrite_ttl": 1},
             {"rule_set": ["ChinaDomain"],"action": "route","server": "ali"}
@@ -65,8 +65,8 @@
             {"action": "sniff","sniffer": ["http","tls","quic","dns"],"timeout": "500ms"},
             {"type": "logical","mode": "or","rules": [{"port": 53},{"protocol": "dns"}],"action": "hijack-dns"},
             {"ip_is_private": true,"action": "route","outbound": "direct"},
-            {"clash_mode": "全局直连","action": "route","outbound": "direct"},
-            {"clash_mode": "全局代理","action": "route","outbound": "Proxy"},
+            {"clash_mode": "Direct","action": "route","outbound": "direct"},
+            {"clash_mode": "Global","action": "route","outbound": "Proxy"},
             {"rule_set": ["Ads"],"action": "reject"},
             {"rule_set": ["AI"],"action": "route","outbound": "AI"},
             {"rule_set": ["YouTube","Google"],"action": "route","outbound": "Google"},
@@ -95,7 +95,7 @@
             "store_fakeip": true
         },
         "clash_api": {
-            "default_mode": "规则模式",
+            "default_mode": "Rule",
             "external_controller": "127.0.0.1:9090",
             "external_ui": "ui",
             "external_ui_download_url": "https://git.repcz.link/github.com/Zephyruso/zashboard/releases/latest/download/dist.zip",
@@ -127,3 +127,4 @@
         }
     ]
 }
+
